@@ -1,0 +1,62 @@
+{%extends "base/base1.html"%}
+
+{%block content%}
+
+    <div class="container">
+        <center class="text-white-50 bg-dark">
+            <h1>Informacion sobre COVID-19</h1>
+        <h2>Tabla con visualizacion completa y detallada de los casos a nivel nacional</h2>
+        </center>
+
+    </div>
+
+    <br><br>
+
+    <div style=" overflow:scroll; height:400px; width:1200px;">
+          <table class="table table-dark table-striped">
+              <thead>
+            <tr>
+              <th>Id de caso</th>
+              <th>fecha notificacion</th>
+              <th>divipola</th>
+              <th>Ubicacion</th>
+                <th>departamento</th>
+                <th>atencion</th>
+                <th>edad</th>
+                <th>sexo</th>
+                <th>tipo</th>
+                <th>estado</th>
+                <th>procedencia</th>
+                <th>fis</th>
+                <th>fecha de muerte</th>
+                <th>fecha diagnostico</th>
+                <th>fecha recuperado</th>
+                <th>reporte web</th>
+            </tr>
+            </thead>
+              {% for i in range(x) %}
+              <tbody>
+                  <tr>
+                      <th>{{id[i+1]}}</th>
+                      <th>{{fecha[i+1]}}</th>
+                      <th>{{divipola[i+1]}}</th>
+                      <th>{{Ubicacion[i+1]}}</th>
+                        <th>{{departamento[i+1]}}</th>
+                        <th>{{atencion[i+1]}}</th>
+                        <th>{{edad[i+1]}}</th>
+                        <th>{{sexo[i+1]}}</th>
+                        <th>{{tipo[i+1]}}</th>
+                        <th>{{estado[i+1]}}</th>
+                        <th>{{procedencia[i+1]}}</th>
+                        <th>{{fis[i+1]}}</th>
+                        <th>{{fechaDeMuerte[i+1]}}</th>
+                        <th>{{fecha_diagnostico[i+1]}}</th>
+                        <th>{{fecha_recuperado[i+1]}}</th>
+                        <th>{{reporte_web[i+1]}}</th>
+                  </tr>
+                  </tbody>
+              {% endfor %}
+          </table>
+    </div>
+
+{%endblock%}

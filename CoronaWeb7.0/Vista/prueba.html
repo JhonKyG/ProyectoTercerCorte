@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hola perras</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+    <div class="bg-dark text-white" style="margin-left:15px;margin-right:15px;;margin-bottom:15px;">
+      <div style="margin-left:15px;margin-right:15px;;margin-bottom:15px;">
+          <br>
+            <center><h1 justify-content>MAS INFORMACION</h1></center>
+            <hr size="8px" color="white" />
+          <br>
+      </div>
+    </div>
+
+    <div class="btn bg-dark text-white" style="margin-left:15px;margin-right:15px;;margin-bottom:15px;" >
+        <button type="button" class="btn btn-primary bg-dark" onclick="textos(0)">¿ Que es un Virus?</button>
+        <button type="button" class="btn btn-primary bg-dark" onclick="textos(1)">¿ Cual es la estructura de Virus?</button>
+        <button type="button" class="btn btn-primary bg-dark" onclick="textos(2)">¿ Cual es el origen de los virus?</button>
+        <button type="button" class="btn btn-primary bg-dark" onclick="textos(3)">¿ Como se propaga un virus ?</button>
+        <button type="button" class="btn btn-primary bg-dark" onclick="textos(4)">¿ Los Virus son inmortales ?</button>
+        <button type="button" class="btn btn-primary bg-dark" onclick="textos(5)">¿ Que cuidados tomo para mi Hogar ?</button>
+        <button type="button" class="btn btn-primary bg-dark" onclick="textos(6)">¿ Que es el Covid-19 ?</button>
+        <button type="button" class="btn btn-primary bg-dark" onclick="textos(7)">¿ Existe alguna Vacuna ?</button>
+        <button type="button" class="btn btn-primary bg-dark" onclick="textos(8)">¿ Los animales se contagian de Covid-19 ?</button>
+    </div>
+
+    <script>
+
+        function textos(tf){
+
+            var array =[]
+
+            array[0] = document.getElementById('Text1');
+            array[1] = document.getElementById('Text2');
+            array[2] = document.getElementById('Text3');
+            array[3] = document.getElementById('Text4');
+            array[4] = document.getElementById('Text5');
+            array[5] = document.getElementById('Text6');
+            array[6] = document.getElementById('Text7');
+            array[7] = document.getElementById('Text8');
+            array[8] = document.getElementById('Text9');
+
+            var length = array.length;
+
+            for (var i = 0; i < length; i++) {
+                if(i!==tf) {
+                    if (array[i].style.display !== 'none') {
+                        array[i].style.display = 'none';
+                    }
+                }
+            }
+
+            if (array[tf].style.display === 'none') {
+              array[tf].style.display = 'block';
+            } else {
+              array[tf].style.display = 'none';
+            }
+
+        }
+
+        $(document).ready(function(){
+          $('[data-toggle="popover"]').popover();
+        });
+
+
+     </script>
+
+    <br>
+
+    <div class="bg-dark text-white" style="margin-left:15px;margin-right:15px;">
+
+        <div style="display: none;" id="Text1">
+            <div style="margin-right: 70px;  margin-left: 70px;">
+                <br>
+                <h2>Que Son Los Virus</h2>
+                <hr size="8px" color="white" />
+                <br>
+                    <iframe style="float: right; margin-left: 20px;" width="600" height="330"
+                            src="https://www.youtube.com/embed/rid0-Xxecys" frameborder="0" allow="accelerometer; autoplay;
+                            encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                    </iframe>
+                <p>
+
+                    Los virus son pequeños pedazos de ARN (ácido ribonucleico) o ADN (ácido desoxirribonucleico),
+                    muchos están encapsulados en una envoltura hecha a base de proteínas conocida como cápside, otros
+                    protegen su material genético con una membrana o envoltura derivada de la célula a la que infectan y
+                    algunos otros además rodean su cápside con una membrana celular.
+
+                    <br>
+
+                    Los virus han evolucionado para
+                    reproducirse dentro de la célula que infectan,  ya que por si solos no son capaces de hacerlo porque
+                    carecen de la maquinaria molecular necesaria. Entonces, hay tres problemas que un virus debe resolver
+                    para poder hacer más copias de él mismo:
+
+                    <br><br>
+
+                    ¿cómo reproducirse dentro de la célula que infecta?<br>
+                    ¿cómo esparcirse de un hospedero a otro?<br>
+                    ¿cómo evitar ser eliminado por las defensas (sistema inmunológico) del hospedero?
+
+                    <br><br>
+
+                    De manera general los virus de ADN utilizan partes de la información del hospedero, así como
+                    también parte de su maquinaria celular. El problema con esta estrategia es que la mayor parte de las células
+                    maduras del hospedero no están replicándose activamente, se encuentran reposando para ahorrar energía.
+                    Por lo tanto, los virus de ADN necesitan encontrar la manera de activar el motor (“pasarle corriente”)
+                    de la célula hospedera o, alternativamente, traer consigo los aditamentos de aquellas partes celulares
+                    que no están activas cuando el virus entra.
+
+                    <br><br>
+
+                    Por otro lado, los virus de RNA traen consigo sus propias máquinas de copiado de información genética
+                    (ej. enzima RNA-polimerasa) o poseen genes (información genética) que producen las proteínas que se requieren
+                    para ensamblar las máquinas de copiado dentro de la célula que infectan, lo que los hace independientes de la
+                    maquinaria celular y capaces de infectar células que no están activamente reproduciéndose.
+
+                    <br><br>
+
+                    Básicamente lo que los virus hacen para reproducirse es secuestrar la fábrica de la célula para producir
+                    virus en lugar de nuevas células.
+
+                </p>
+                <br>
+            </div>
+        </div>
+
+        <div style="display: none;" id="Text2">
+            <div style="margin-right: 70px;  margin-left: 70px;">
+
+                <br>
+                <h2>Estructura De Los Virus</h2>
+                <hr size="8px" color="white" />
+                <br>
+
+                <p>
+
+                    <img src="static/img/letal.jpg" style="float: right; margin-left: 20px;" width="500" height="230">
+
+                    Los virus más pequeños y simples están constituidos únicamente por ácido nucleico y proteínas.
+                    El ácido nucleico es el genoma viral, ubicado en el interior de la partícula, y puede ser ADN o ARN.
+                    Generalmente está asociado con un número pequeño de moléculas proteicas que pueden tener actividad
+                    enzimática o cumplir alguna función estabilizadora para el plegamiento del ácido nucleico y armado
+                    de la partícula viral. Este conjunto de genoma y proteínas íntimamente asociadas es llamado "core",
+                    núcleo, nucleoproteína o nucleoide. Este núcleo central está rodeado por una cubierta proteica, la
+                    cápside, que junto con el genoma constituye la nucleocápside.
+
+                    <br><br>
+
+                    Las cápsides virales están formadas por un gran número de subunidades polipeptídicas que se
+                    ensamblan adoptando una simetría de tipo helicoidal (nucleocápside en forma de bastón) o
+                    icosaédrica (partículas casi esféricas). En algunos virus más complejos, por fuera de la cápside
+                    se encuentra otra cubierta, la envoltura, que es una estructura membranosa constituida por lípidos
+                    y glicoproteínas. Dicha cubierta viral puede ser considerada una cubierta protectora adicional.
+
+                <br><br>
+
+                </p>
+
+                <h3>Acidos Nucleicos Virales</h3>
+                <hr size="8px" color="white" />
+                <br>
+
+                <p>
+                    Los virus se caracterizan, a diferencia de los otros organismos, por presentar una única especie de
+                    ácido nucleico constitutiva que puede ser ADN o ARN, monocatenario o bicatenario con estructura de
+                    doble hélice. La mayoría de los virus ADN presentan un genoma bicatenario, con excepción de los
+                    parvovirus, constituidos por ADN monocatenario. Además las moléculas de ADN viral pueden ser lineales
+                    o circulares.
+
+                    <br><br>
+
+                    La conformación circular que presentan los Papovaviridae y Hepadnaviridae, confiere una serie de
+                    ventajas al ácido nucleico respecto de la estructura lineal, otorgándole protección frente al ataque
+                    de exonucleasas, facilitando la replicación completa de la molécula y su posible integración al ADN
+                    celular. En el caso de los papovavirus, el ADN puede presentar tres conformaciones: la forma I
+                    corresponde a la molécula circular covalentemente cerrada y superenrollada sobre sí misma. Si se
+                    produce una ruptura en una unión en una de las cadenas, la doble hélice se desenrolla y resulta una
+                    molécula circular relajada (forma II). Por último, la forma III es el resultado de una ruptura en la
+                    otra cadena que origina una molécula bicatenaria lineal.
+
+                    <br><br>
+
+                    <img src="static/img/viral.jpg" style="float: left; margin-right: 20px;" width="500" height="230">
+
+                    El ADN circular de los hepadnavirus tiene una estructura muy peculiar y de características únicas
+                    dentro de los ADN virales: una de las cadenas (S, corta) es incompleta, de manera que el 15-50% de
+                    la molécula es monocatenaria; la otra cadena (L, larga) presenta ruptura en un único punto de la
+                    molécula y además tiene una proteína unida covalentemente en el extremo 5`.
+
+
+                    <br><br>
+
+                    Los ARN de los virus animales son en su gran mayoría de cadena simple, siendo Reoviridae y
+                    Birnaviridae las únicas familias que presentan como genoma ARN bicatenario. En algunos grupos de
+                    virus, el ARN genómico está segmentado en varios fragmentos, cuyo número es característico de cada
+                    familia.
+
+                    Además de las características físicas y químicas mencionadas, la polaridad o sentido de la cadena de
+                    ARN es una propiedad fundamental utilizada para definir los distintos tipos de ARN viral. Se parte
+                    de definir como polaridad positiva la secuencia de bases correspondiente al ARNm y polaridad negativa
+                    a la secuencia complementaria a la del ARNm. Un virus es de cadena positiva cuando su ARN genómico
+                    tiene la polaridad que le permite actuar como ARNm, o sea ser traducido en proteínas, inmediatamente
+                    después de haber entrado a la célula.
+
+                    <br><br>
+
+                    Por el contrario, en los virus de polaridad negativa el ARN genómico tiene la  secuencia
+                    complementaria al ARNm viral; por lo tanto, cuando se produce la infección y el ARN viral entra en
+                    la célula debe sintetizar la cadena complementaria que será el ARNm. Para ello, los virus de
+                    polaridad negativa llevan en el virión asociada a su genoma una ARN polimerasa dependiente de ARN,
+                    enzima denominada transcriptasa, que efectúa la transcripción del ARN mensajero a partir del ARN
+                    genómico.
+
+                    <br><br>
+
+                </p>
+
+                <h2>Capsides</h2>
+                <hr size="8px" color="white" />
+                <br>
+
+                <p>
+
+                    <img src="static/img/capsides.jpg" style="float: left; margin-right: 20px;" width="400" height="220">
+
+                    La cápside es una cubierta proteica externa que encierra y protege al genoma viral de la acción de
+                    nucleasas y otros factores adversos del medio exterior. Además, en los virus desnudos carentes de
+                    envoltura, la cápside es la encargada de establecer a través de alguna de sus proteínas la unión con
+                    la célula que será parasitada por el virus.
+
+                    Asimismo, las proteínas de la cápside contienen los
+                    determinantes antigénicos contra los que el sistema inmune del huésped elaborará la respuesta de
+                    anticuerpos en defensa del organismo.
+
+                    <br><br>
+
+                    Hay dos tipos básicos de estructura que pueden presentar las cápsides virales: simetría icosaédrica,
+                    observándose el virión al microscopio de forma aproximadamente esférica, o simetría helicoidal,
+                    resultando nucleocápsides filamentosas tubulares pero que pueden estar encerradas dentro de una
+                    envoltura que confiere a la partícula forma esférica o de bastón.
+
+                    <br><br>
+
+                    Simetría icosaédrica: El icosaedro es un poliedro de 20 caras triangulares equiláteras con 12
+                    vértices. Presenta simetría rotacional 5.3.2, por lo que tiene 6 ejes de simetría quíntuple que
+                    pasan a través de pares de vértices opuestos; 10 ejes de simetría triple que pasan a través del
+                    centro de las caras, y 15 ejes de simetría binaria, a través de los puntos medios de las aristas.
+
+                    <br><br>
+
+                </p>
+
+                <h2>Envolturas</h2>
+                <hr size="8px" color="white" />
+                <br>
+
+                <p>
+
+                    <img src="static/img/envoltura.jpg" style="float: right; margin-left: 20px;" width="500" height="250">
+
+                    La envoltura de un virus es una membrana constituida por una doble capa lipídica asociada a
+                    glicoproteínas que pueden proyectarse en forma de espículas desde la superficie de la partícula
+                    viral hacia el exterior.
+
+                    <br><br>
+
+                    Los virus adquieren su estructura mediante un proceso de brotación a través de alguna membrana
+                    celular. El número de glicoproteínas que presentan los virus animales es muy variable.
+                    Las glicoproteínas virales que forman las espículas son proteínas integrales de membrana que
+                    atraviesan la bicapa de lípidos presentando tres dominios topológicamente diferenciables:
+
+                    <br><br>
+
+                    1) Un gran dominio hidrofílico hacia el exterior de la membrana<br>
+                    2) Un pequeño dominio hidrofóbico formado por 20-27 aminoácidos que atraviesa la capa lipídica y
+                    ancla la glicoproteína a la membrana<br>
+                    3) Un pequeño dominio hidrofílico hacia el interior de la
+                    partícula viral. Este último dominio interactúa con las proteínas de la nucleocápside, ya sea
+                    directamente o a través de una proteína viral no glicosilada denominada M (de matriz), que se
+                    encuentra en algunos virus animales por debajo de la bicapa.<br>
+
+                    <br>
+
+                    <img src="static/img/virusss.jpg" style="float: left; margin-right: 20px;" width="400" height="200">
+
+                    <br>
+
+                    Las glicoproteínas virales cumplen diversas funciones biológicas durante el ciclo de vida de un
+                    virus, siendo esenciales para la infectividad, ya que actúan:
+
+                    <br><br>
+
+                    1) En la adsorción a la célula huésped<br>
+                    2) En el proceso de fusión que permite la entrada de la nucleocápside viral al citoplasma<br>
+                    3) En la brotación, que permite la salida del virus envuelto a partir de la célula infectada.<br>
+
+                    <br>
+
+                    Además las glicoproteínas son el blanco de reacción para el sistema inmune tanto en la respuesta
+                    humoral como celular.
+
+                    <br><br><br>
+
+                </p>
+
+
+            </div>
+        </div>
+
+        <div style="display: none;" id="Text3">
+            <div style="margin-right: 70px;  margin-left: 70px;">
+                <br>
+                <h2>Origen de Los Virus</h2>
+                <hr size="8px" color="white" />
+                <br>
+                <p>
+
+                        Al estudiar el origen de los virus, hay que considerar previamente que los virus son agentes infecciosos acelulares
+                        que infectan células y producen viriones para difundir sus genes; por lo que en su origen se debe considerar la
+                        interacción entre el virus y su huésped. Igualmente destaca que la mayoría de las proteínas virales no tienen
+                        homólogos en las células modernas, en contradicción con la visión tradicional de los virus como los «ladrones de
+                        genes celulares».
+
+                        <br><br>
+
+                        <iframe style="float: right; margin-left: 20px; margin-top: 20px;" width="700" height="400" src="https://www.youtube.com/embed/n1J42hPnCLM"
+                         frameborder="0"  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                        Esto sugiere que los genes virales básicamente tienen su origen durante la multiplicación de los
+                        genomas virales, o provendrían de linajes celulares ahora extintos (ya que algunas proteínas virales específicas
+                        están presentes en virus que infectan a los miembros de los tres dominios de la vida,46​ lo que sugiere que los virus
+                        son en realidad muy antiguos en la historia de la vida). En particular, los análisis estructurales de proteínas de
+                        la cápside han revelado que al menos dos tipos de viriones se habrían originado de manera independiente antes que
+                        LUCA (el Último antepasado común universal de la vida celular).
+
+                        <br><br>
+
+                        Aunque recientemente se han propuesto varias hipótesis
+                        para explicar el origen de los virus, sigue sin explicarse completamente la aparición de viriones como mecanismo
+                        específico para la difusión de genes. El autoensamblaje de los virus dentro de las células igualmente tiene
+                        implicaciones para el estudio del origen de la vida, pues refuerza las hipótesis de que la vida podría haber
+                        comenzado en forma de moléculas orgánicas autoensamblantes, (ver protobionte).47​ A partir de su estructura,
+                        igualmente se ha postulado una hipótesis que sostiene que el núcleo de la célula eucariota evolucionó a partir
+                        de un gran virus de ADN (eucariogénesis viral).
+
+                        <br><br>
+
+                        Los avances en la caracterización de los virus a nivel molecular sugieren que los virus coevolucionan con
+                        sus organismos huéspedes,48​ debido a que los virus son parásitos intracelulares extremos y, por lo tanto,
+                        requieren de la supervivencia del huésped para poder asegurar su propia supervivencia. (Es interesante notar
+                        en este punto que cuando un virus se multiplica en su huésped natural, tiende a no causar una enfermedad en él,
+                        o causa una enfermedad leve y limitada en la mayoría de los casos.
+
+                        <br><br>
+
+                        Varios de los virus conocidos producen
+                        enfermedades graves solo cuando infectan organismos diferentes de sus huéspedes naturales. Lo anterior sugiere
+                        que buena parte de los virus asociados con la producción de enfermedades son virus que están en proceso de
+                        adaptación a un nuevo tipo de huésped y que, una vez lograda ésta, la estrategia del virus consistirá en
+                        perpetuarse y propagarse sin afectar al organismo huésped.[cita requerida])
+                        Se pueden hallar virus dondequiera que haya organismos vivos, y probablemente existan desde la aparición de
+                        las primeras células.
+
+                        <br><br>
+
+                        Pero, puesto que no fosilizan, no tenemos certeza de ello, de ahí que se puedan
+                        considerar especulaciones lo que se hace en disciplinas como la paleovirología.49​50​ A este fin se
+                        utilizan diferentes técnicas y ensayos de biología molecular. Estas técnicas dependen de la
+                        disponibilidad de ADN o ARN vírico antiguo, pero desgraciadamente la mayoría de los virus que se han
+                        preservado y almacenado en laboratorios tienen menos de 90 años.
+
+                        <br><br>
+
+                </p>
+            </div>
+        </div>
+
+        <div style="display: none;" id="Text4">
+            <div style="margin-right: 70px;  margin-left: 70px;">
+                <br>
+                <h2>Propagacion</h2>
+                <hr size="8px" color="white" />
+                <br>
+                <p class="text-white">
+
+                    <iframe style="float: left; margin-right: 20px;" width="600" height="360"
+                            src="https://www.youtube.com/embed/9pyIYb8in80" frameborder="0" allow="accelerometer;
+                            autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                    </iframe>
+
+                    Se piensa que el virus se propaga principalmente de persona a persona.
+                    Entre personas que están en contacto cercano (a una distancia de hasta aproximadamente 6 pies).
+                    A través de gotitas respiratorias que se producen cuando una persona infectada tose, estornuda o habla.
+                    Estas gotitas pueden terminar en la boca o en la nariz de quienes se encuentran cerca o posiblemente ser
+                    inhaladas y llegar a los pulmones.
+
+                    <br><br>
+
+                    Algunos estudios recientes sugieren que el COVID-19 puede propagarse a
+                    través de personas que no presentan síntomas. Mantener un buen distanciamiento social (aproximadamente 6
+                    pies) es muy importante para prevenir la propagación del COVID-19.
+
+                    <br><br>
+
+                    Podría ser posible que una persona contraiga el COVID-19 al tocar una superficie u objeto que tenga el
+                    virus y luego se toque la boca, la nariz o posiblemente los ojos. No se cree que esta sea la principal
+                    forma en que se propaga el virus, pero aún estamos aprendiendo acerca del virus. Lávese las manos con agua
+                    y jabón frecuentemente. Si no hay agua y jabón, use un limpiador de manos a base de alcohol. Además, limpie
+                    de manera rutinaria las superficies que se tocan con frecuencia.
+
+                    <br><br>
+
+                    La facilidad con la que el virus se propaga de persona a persona puede variar. Algunos virus son muy
+                    contagiosos, como el del sarampión, mientras que otros virus no se propagan tan fácilmente. Otro factor
+                    que hay que tener en cuenta es si la propagación es sostenida, es decir, se propaga de manera
+                    continua de persona a persona.
+
+                    <br><br>
+
+                    El virus que causa el COVID-19 se propaga muy fácilmente y de manera continua entre las personas. La
+                    información sobre la pandemia en curso del COVID-19 sugiere que este virus se propaga de manera más
+                    eficiente que el virus de la influenza, pero no tan eficientemente como el del sarampión, que es un virus
+                    altamente contagioso.
+
+                    <br><br>
+
+                </p>
+            </div>
+        </div>
+
+        <div style="display: none;" id="Text5">
+            <div style="margin-right: 70px;  margin-left: 70px;">
+                <br>
+                <h2>La Inmortalidad De Los Virus</h2>
+                <hr size="8px" color="white" />
+                <br>
+                <p>
+
+                    <img src="static/img/covid19.jpg" style="float: right; margin-left: 20px;" width="500" height="210">
+
+                    Responder a esta pregunta no es trivial puesto que no hay consenso en la comunidad científica sobre si los virus son o no organismos
+                    vivos. En ocasiones se habla de ellos como estructuras al límite de la vida. Pero vayamos a lo que sí son con toda
+                    seguridad: agentes infecciosos que necesitan de un organismo vivo para multiplicarse, es decir, parásitos. No son
+                    células pero infectan a todo tipo de organismos vivos: animales, plantas, hongos, bacterias y protozoos, ¡hasta se
+                    han encontrado parasitando a otros virus! Son tan pequeños –100 nanómetros de media o lo que es lo mismo, una milésima
+                    parte del grosor de un cabello- que no pueden observarse con el microscopio óptico, solo cuando se inventó el microscopio
+                    electrónico, en 1931, que es capaz de ver objetos minúsculos, pudimos tener una imagen de ellos. Al observar al microscopio
+                    electrónico los virus extraídos de un organismo infectado se pudo comprobar que aparecían múltiples partículas. Cada una
+                    de esas partículas víricas era extraordinariamente sencilla, estaba formada por una cubierta hecha de proteína y llamada
+                    cápside en cuyo interior se protege el material genético que puede ser ADN o ARN. En algunos tipos de virus las partículas
+                    tienen también un envoltorio lipídico, es decir formado por lo que normalmente llamamos grasas, que roban de las membranas
+                    de las células que infectan.
+
+                    <br><br>
+
+                </p>
+            </div>
+        </div>
+
+        <div style="display: none;" id="Text6">
+            <div style="margin-right: 70px;  margin-left: 70px;">
+
+                <br>
+                <h2>Cuidados</h2>
+                <hr size="8px" color="white" />
+                <br>
+
+                <img src="static/img/doctor.jpg" style="float: right; margin-left: 40px;" width="350" height="670">
+
+                <p>
+                    1. Lavarse las manos
+                    Lávese las manos regularmente con un desinfectante a base de alcohol o con agua y jabón. Evite tocarse la cara después de tocar superficies contaminadas ya que esto puede trasmitir el virus, así mismo, se debe evitar el contacto directo con personas contagiadas. Al limpiar las manos se puede reducir el riesgo.
+
+                    <br><br>
+
+                    2. Limpieza de superficies
+                    Limpie de manera constante las encimeras de la cocina y los escritorios de su casa y trabajo, use desinfectante al hacerlo.
+
+                    <br><br>
+
+                    3. Informarse
+                    Infórmese a través de fuentes confiables sobre el avance del coronavirus en el mundo, diríjase al sitio web del ministerio de salud de su país, o al portal de la OMS, para evitar la incertidumbre y el pánico. Es necesario en este punto aclarar los síntomas de la enfermedad: para la mayoría de las personas, comienza con fiebre y tos seca, no con secreción nasal. Una persona sana mejorará con mayor rapidez y tendrá solo síntomas leves.
+
+                    <br><br>
+
+                    4. Evitar los viajes
+                    Absténgase de viajar si tiene síntomas de enfermedades respiratorias como tos o fiebre, en caso de presentar síntomas durante el vuelo, informe de manera inmediata a la tripulación. Al llegar a su destino se debe poner en contacto con un médico informándole sus sitios de visita.
+
+                    <br><br>
+
+                    5. Precaución al toser y estornudar
+                    Toser o estornudar en un pañuelo de papel y tirarlo inmediatamente en un contenedor de basura cerrado, inmediatamente después lávese las manos con agua y jabón, o use antibacterial.
+
+                    <br><br>
+
+                    6. Evitar zonas concurridas si se es adulto mayor
+                    Si tiene más de 60 años, o si tiene una enfermedad cardiovascular, sufre de diabetes o una afección respiratoria se incremente el riesgo de contagio del virus, como precaución evite zonas demasiado concurridas o lugares donde haya gente enferma.
+
+                    <br><br>
+
+                    7. Quédese en casa si está enfermo
+                    Si no se siente bien, quédese en casa y llame a su médico o profesional de salud local. Él o ella le hará algunas preguntas sobre sus síntomas, dónde ha estado y con quién ha tenido contacto. Esto ayudará a asegurarse de que reciba el asesoramiento correcto, se dirija al centro de salud adecuado y evitará que infecte a otros.
+
+                    <br><br>
+
+                    8. Cuidados en casa
+                    Si presenta síntomas respiratorios estando en su casa, duerma y coma separado de su familia, además, tenga utensilios y cubiertos exclusivos para su uso.
+
+                    <br><br>
+
+                    9. Consulta médica
+                    Si presenta dificultad para respirar, tos seca y fiebre que no se controla llame a su médico o busque atención medica de inmediato.
+
+                    <br><br>
+
+                    10. Hablar en el trabajo y su comunidad
+                    El estado de inquietud que genera esta enfermedad es normal, especialmente si se vive en un país que está siendo afectado, por tanto, discuta con su comunidad y en su trabajo las recomendaciones sobre cómo mantenerse seguro y reducir las posibilidades de contagio.
+
+                    <br><br><br>
+
+                </p>
+            </div>
+        </div>
+
+        <div style="display: none;" id="Text7">
+            <div style="margin-right: 70px;  margin-left: 70px;">
+                <br>
+                <h2>Covid 19</h2>
+                <hr size="8px" color="white" />
+                <br>
+
+                <img src="static/img/covid.jpg" style="float: left; margin-right: 40px;" width="400" height="250">
+
+                <p>
+
+                    Los coronavirus son una extensa familia de virus que causan infecciones respiratorias que
+                    pueden ir desde el resfriado común hasta enfermedades más graves como el síndrome respiratorio
+                    de Oriente Medio (MERS) y el síndrome respiratorio agudo severo (SRAS). El coronavirus que se ha
+                    descubierto más recientemente causa la enfermedad por coronavirus COVID-19.
+
+                    <br><br>
+
+                    La COVID‑19 es la enfermedad infecciosa causada por el coronavirus que se ha descubierto más recientemente. Tanto este nuevo
+                    virus como la enfermedad que provoca eran desconocidos antes de que estallara el brote en Wuhan (China) en diciembre de 2019.
+                    Actualmente la COVID‑19 es una pandemia que afecta a muchos países de todo el mundo.
+
+                    <br><br>
+
+                    En el nombre abreviado, “CO” corresponde a “corona”, “VI” a “virus” y “D” a “disease” (“enfermedad”).
+                    El COVID-19 es una nueva enfermedad descubierta en el año 2019, causada por un nuevo coronavirus
+                    que no se había visto antes en seres humanos.
+
+                    <br><br><br>
+
+                </p>
+            </div>
+        </div>
+
+        <div style="display: none;" id="Text8">
+            <div style="margin-right: 70px;  margin-left: 70px;">
+
+                <br>
+                <h2>Vacuna</h2>
+                <hr size="8px" color="white" />
+                <br>
+
+                <img src="static/img/cura.jpg" style="float: right; margin-left: 30px;" width="500" height="300">
+
+                <p>
+                    Aunque algunas soluciones de la medicina occidental o tradicional o remedios caseros pueden resultar reconfortantes
+                    y aliviar los síntomas leves de la COVID-19, hasta ahora ningún medicamento ha demostrado prevenir o curar esta
+                    enfermedad. La OMS no recomienda automedicarse con ningún fármaco, incluidos los antibióticos, para prevenir o
+                    curar la COVID-19. Sin embargo, hay varios ensayos clínicos en marcha, tanto de medicamentos occidentales como
+                    tradicionales. La OMS está coordinando la labor de desarrollo de vacunas y medicamentos para prevenir y tratar
+                    la COVID-19 y seguirá proporcionando información actualizada a medida que se disponga de los resultados de las
+                    investigaciones.
+
+                    <br><br>
+
+                    Las formas más eficaces de protegerse a uno mismo y a los demás frente a la COVID‑19 son:
+
+                    <br><br>
+
+                    - Lavarse las manos a fondo y con frecuencia.<br>
+                    - Evitar tocarse los ojos, la boca y la nariz.<br>
+                    - Cubrirse la boca con el codo flexionado o con un pañuelo. Si se utiliza un pañuelo, hay que desecharlo <br>
+                    - inmediatamente después de su uso y lavarse las manos.<br>
+                    - Mantener una distancia de al menos un metro con las demás personas. <br>
+
+                    <br><br>
+
+                </p>
+            </div>
+        </div>
+
+        <div style="display: none;" id="Text9">
+            <div style="margin-right: 70px;  margin-left: 70px;">
+                <br>
+                <h2>Mascota</h2>
+                <hr size="8px" color="white" />
+                <br>
+
+                <img src="static/img/mascota.jpg" style="float: right; margin-left: 30px;" width="450" height="250">
+
+                <p class="text-white">
+
+                    La respuesta más sencilla es que su mascota no le transmitirá el coronavirus. Estos aparecen en prácticamente todas las
+                    especies animales, incluidos los humanos, y se asocian comúnmente con infecciones intestinales y respiratorias poco
+                    aparentes o transitorias. Tienden a ser muy específicos de cada especie y la transmisión entre especies no es común.
+
+                    <br><br>
+
+                    La respuesta más compleja es la siguiente: los coronavirus se han adaptado por mutación durante miles de años a
+                    prácticamente todas las especies de animales, incluidos los humanos. Solo causan enfermedades en las nuevas especies
+                    a las que infectan y tienden a permanecer en esa especie manteniendo la conformación genética que permita su adaptación
+                    a los nuevos huéspedes.
+
+                    <br><br>
+
+                    Aunque los coronavirus pueden pasar de un huésped a otro, es un proceso lento y requiere un cambio genético muy
+                    significativo. No hay evidencia de que los coronavirus de nuestras mascotas más comunes hayan infectado a los
+                    humanos en el pasado reciente o viceversa.
+
+                    <br><br>
+
+                 </p>
+            </div>
+        </div>
+
+    </div>
+
+    <br>
+
+    <div class="bg-dark text-white" style="margin-left:15px;margin-right:15px;">
+        <div style="margin-right: 70px;  margin-left: 70px;">
+            <br>
+            <h2>SINTOMAS DEL CORONAVIRUS</h2>
+            <hr size="8px" color="white" />
+            <br>
+              <img src="static/img/sinto.jpg" class="mx-auto d-block" style="width:80%">
+            <br><br>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="bg-dark text-white" style="margin-left:15px;margin-right:15px;">
+        <div  class ="text-center" style="margin-right: 70px;  margin-left: 70px;" style="width: 100%; height: 100%;">
+            <br>
+            <h2>ORGANOS QUE ATACA EL COVID-19</h2>
+            <hr size="8px" color="white" />
+            <br>
+            <div id="demo" class="carousel slide" data-ride="carousel">
+              <ul class="carousel-indicators">
+                <li data-target="#demo" data-slide-to="0" class="active"></li>
+                <li data-target="#demo" data-slide-to="1"></li>
+                <li data-target="#demo" data-slide-to="2"></li>
+                <li data-target="#demo" data-slide-to="3"></li>
+                <li data-target="#demo" data-slide-to="4"></li>
+                <li data-target="#demo" data-slide-to="5"></li>
+                <li data-target="#demo" data-slide-to="5"></li>
+              </ul>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="static/img/cerebro.png" alt="Los Angeles" style="width: 100%; height: 100%;">
+                  <div class="carousel-caption">
+                    <h3>El cerebro</h3>
+                    <p>El virus puede llegar al cerebro. Con la posibilidad de que se
+                        <br>infle por una respuesta inmunitaria descrontrolada</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="static/img/corazon.jpg" alt="Chicago" style="width: 100%; height: 50%;">
+                  <div class="carousel-caption">
+                    <h3>Corazon</h3>
+                    <p>El musculo cardiaco puede infectarse por el virus; la falta de
+                        <br>oxigeno causa problemas cardiacos</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="static/img/pulmones.jpg" alt="New York" style="width: 100%; height: 50%;">
+                  <div class="carousel-caption">
+                    <h3>Pulmones</h3>
+                    <p>Los virus se replican en la garganta y en los pulmones</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="static/img/higado.jpg" alt="New York" style="width: 100%; height: 50%;">
+                  <div class="carousel-caption">
+                    <h3>Higados Riñones y Pancreas</h3>
+                    <p>Los higados, riñones y pancreas se pueden ver dañar por las propieas
+                        <br> defensas del ornaismo, provocando una inflacion que no los deja
+                        <br>trabajar</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="static/img/sabor.jpg" alt="New York" style="width: 100%; height: 50%;">
+                  <div class="carousel-caption">
+                    <h3>La lengua</h3>
+                    <p>El virus provoca perdidas del olfato y gusto
+                        <br>al 59% de los infectados</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="static/img/garganta.jpg" alt="New York" style="width: 100%; height: 50%;">
+                  <div class="carousel-caption">
+                    <h3>La garganta</h3>
+                    <p>Puede causar dolor e incomodidad</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="static/img/sangre.jpg" alt="New York" style="width: 100%; height: 50%;">
+                  <div class="carousel-caption">
+                    <h3>La sangre</h3>
+                    <p>Provoca coagulos en la sangre que pueden
+                        <br>obstaculisar el paso de la misma</p>
+                  </div>
+                </div>
+              </div>
+              <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+              </a>
+              <a class="carousel-control-next" href="#demo" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+              </a>
+            </div>
+            <br>
+        </div>
+    </div>
+
+    <br>
+    <hr size="8px" color="white" />
+    <br>
+
+    <div class="bg-dark text-white" style="margin-left:15px;margin-right:15px;">
+        <div style="margin-right: 70px;  margin-left: 70px;">
+            <br>
+            <h2>¿ QUIERES SABER MAS ?</h2>
+            <hr size="8px" color="white" />
+            <br>
+                <div class="container">
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <div class=" card" style="width:250px; height:100%">
+                        <br><br>
+                        <div class="card-body">
+                        <img class="card-img-top text-center" src="static/img/rcn.jpg" alt="Card image" style="width:100%;">
+                          <h4 class="card-title">Noticias RCN</h4>
+                          <BR>
+                          <a href="https://noticias.canalrcn.com/" class="btn btn-primary stretched-link">Ingresar a la Pagina</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-3">
+                      <div class="card" style="width:250px">
+                        <div class="card-body">
+                          <img class="card-img-top text-center" src="static/img/caracol.png" alt="Card image" style="width:100%">
+                          <h4 class="card-title">Noticias Caracol</h4>
+                          <a href="https://noticias.caracoltv.com/busqueda/Coronavirus" class="btn btn-primary stretched-link">Ingrear a la Pagina</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-3">
+                      <div class="card" style="width:250px">
+                        <div class="card-body">
+                          <img class="card-img-top text-center" src="static/img/claro.jpg" alt="Card image" style="width:100%">
+                          <h4 class="card-title">Historial de Noticias</h4>
+                          <a href="https://co.marca.com/claro/trending/2020/05/16/5ebfdae922601d55198b4623.html" class="btn btn-primary stretched-link">Ingresar a la Pagina</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-3">
+                      <div class="card" style="width:250px">
+                        <div class="card-body" style="width:100%">
+                          <img class="card-img-top text-center rounded-circle" src="static/img/tiki.png" alt="Card image" >
+                          <h4 class="card-title">Noticias Tikitakas</h4>
+                          <a href="https://colombia.as.com/colombia/2020/05/17/tikitakas/1589714634_739595.html" class="btn btn-primary stretched-link">Ingresar a la Pagina</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            <br><br>
+        </div>
+    </div>
+
+</body>
+</html>

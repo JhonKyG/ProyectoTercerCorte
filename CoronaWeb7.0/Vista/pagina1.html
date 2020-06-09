@@ -1,0 +1,105 @@
+{%extends "base/base1.html"%}
+
+{%block content%}
+<br>
+
+    <head>
+        <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"></script>
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"/>
+        <style> #map {width: 82%; height: 600px;} </style>
+        <style> #map2 {width: 82%; height: 600px;} </style>
+        <style> #map3 {width: 82%; height: 600px;} </style>
+    </head>
+        <center class="container">
+        <h2 class="text-white-50 bg-dark">Casos totales en el pais: {{idCase}}</h2>
+        </center>
+    <center>
+     <img style="width: 900px; height: 400px;" src="{{url_for('static', filename='img/open-data.png')}}">
+    </center>
+    <br><br>
+    <div class="container">
+            <center>
+            <h2 class="text-white-50 bg-dark">Principales ciudades del pais</h2>
+            </center>
+        </div>
+    <div id = 'map'></div>
+    <script>
+            var markers = [{% for item in lista %}
+                           "{{item}}",
+                          {% endfor %}]
+            var markers2 = [{% for item in listaCaso %}
+                           "{{item}}",
+                          {% endfor %}]
+            var markers3 = [{% for item in listaRecuperado %}
+                           "{{item}}",
+                          {% endfor %}]
+
+            console.log(markers);
+
+        </script>
+
+    <script type="text/javascript">
+          //Cargando nuestro mapa
+          var mapsipe2 = L.map('map').
+          setView([4.0000000, -72.0000000],5);
+          L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png', {
+            maxZoom: 20,
+            attribution: '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
+            }).addTo(mapsipe2);
+
+          for (var i = 0; i < 100; i+=3) {
+              marker = new L.marker([markers[i+1],markers[i+2]]).bindPopup(markers[i]).addTo(mapsipe2);
+          }
+
+    </script>
+    <br>
+    <br>
+   <div class="container">
+       <center>
+           <h2 class="text-white-50 bg-dark">Densidad de casos por ciudad</h2>
+       </center>
+   </div>
+    <div id = 'map2'></div>
+    <script>
+            var mapsipe = L.map('map2').
+          setView([4.0000000, -72.0000000],
+          5); //[38.6202, -0.5731] es la latitud y longitud de la zona que queremos mostrar, en nuestro caso Ibi
+
+               L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png', {
+                maxZoom: 20,
+                attribution: '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
+                }).addTo(mapsipe);
+
+                for (var i = 0; i < 100; i+=3) {
+                circle = new L.circle([markers[i+1], markers[i+2]], {color: 'red',fillColor: '#f03',fillOpacity: 0.5,radius: (markers2[i]*10)}).bindPopup(markers2[i]).addTo(mapsipe);
+                }
+
+        </script>
+    <br>
+    <br>
+        <div class="container">
+            <center>
+            <h2 class="text-white-50 bg-dark">Densidad de recuperados en las principales ciudades</h2>
+            </center>
+        </div>
+    <div id = 'map3'></div>
+    <script>
+       var mapsipe3 = L.map('map3').
+          setView([4.0000000, -72.0000000],
+          5); //[38.6202, -0.5731] es la latitud y longitud de la zona que queremos mostrar, en nuestro caso Ibi
+
+               L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}{r}.{ext}', {
+                attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+                subdomains: 'abcd',
+                minZoom: 0,
+                maxZoom: 20,
+                ext: 'png'
+            }).addTo(mapsipe3);
+            for (var i = 0; i < 100; i+=3) {
+                circle = new L.circle([markers[i+1], markers[i+2]], {color: 'blue',fillColor: '#4682b4',fillOpacity: 0.5,radius: (markers3[i]*25.42)}).bindPopup(markers3[i]).addTo(mapsipe3);
+                }
+    </script>
+
+<br><br>
+
+{%endblock%}
